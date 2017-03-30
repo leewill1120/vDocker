@@ -30,7 +30,7 @@ func SendResetMail(to string, resetlink string, timeout int) error {
 func SendRegAuthCodeMail(to string, AuthCode string, timeout int) error {
 	data := make(map[string]interface{})
 	data["AppName"] = beego.AppConfig.String("appname")
-	data["Maintainer"] = beego.AppConfig.String("maintainer")
+	data["Maintainer"] = beego.AppConfig.String("user::maintainer")
 	data["AuthCode"] = AuthCode
 	data["TimeOut"] = math.Floor(float64(timeout / 60))
 	subject := beego.AppConfig.String("appname") + "注册验证码"

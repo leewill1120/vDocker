@@ -15,7 +15,7 @@ func init()  {
 		panic(err)
 	}
 
-	models.LoadCreaterMap()
+	models.Init()
 }
 
 func main() {

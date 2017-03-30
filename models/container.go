@@ -2,7 +2,6 @@ package models
 
 import (
 	"github.com/astaxie/beego/orm"
-	"github.com/astaxie/beego/logs"
 )
 
 var (
@@ -25,17 +24,4 @@ type Container struct {
 
 func GetContainerCreator(id string) string {
 	return creatorMap[id]
-}
-
-func LoadCreaterMap()  {
-	o := orm.NewOrm()
-	var containers []*Container
-	_, err := o.QueryTable("container").All(&containers)
-	if nil != err{
-		logs.Error(err)
-	}else{
-		for _, c := range containers{
-			creatorMap[c.Id] = c.Creator
-		}
-	}
 }
