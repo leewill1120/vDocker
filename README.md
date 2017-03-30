@@ -22,4 +22,4 @@ visit to http://your-host:8080/, default user: admin, password: 123456</br>
 [root@10-254-0-111 ui]# npm run build </br>
 
 ### Packet
-[root@10-254-0-111 vDocker]# bee pack
+[root@10-254-0-111 vDocker]# bee pack -exp=.:ui
