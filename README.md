@@ -8,18 +8,22 @@ A docker web console.
   * Email server (for new user register or reset your password)
 
 ### Quick start
-First, create a mysql db instance called "vDocker" </br>
+First, create a mysql db instance called "vDocker"
+```
+[root@10-254-0-111 ~]# git clone https://github.com/leewill1120/vDocker.git
 
-[root@10-254-0-111 ~]# git clone https://github.com/leewill1120/vDocker.git </br>
-[root@10-254-0-111 ~]# cd vDocker </br>
-[root@10-254-0-111 vDocker]# vi conf/app.conf \#write your mysql address into it </br>
-[root@10-254-0-111 vDocker]# bee run </br>
-visit to http://your-host:8080/, default user: admin, password: 123456</br>
+#write your mysql address into it
+[root@10-254-0-111 vDocker]# vi conf/app.conf
 
-### Build UI
-[root@10-254-0-111 ~]# cd vDocker/ui </br>
-[root@10-254-0-111 ui]# npm install </br>
-[root@10-254-0-111 ui]# npm run build </br>
+#run
+[root@10-254-0-111 vDocker]# bee run
+#visit to http://your-host:8080/, default user: admin, password: 123456
 
-### Packet
+#Build UI
+[root@10-254-0-111 ~]# cd vDocker/ui
+[root@10-254-0-111 ui]# npm install
+[root@10-254-0-111 ui]# npm run build
+
+#Packet
 [root@10-254-0-111 vDocker]# bee pack -exp=.:ui
+```
